@@ -1,9 +1,0 @@
-#app:before{
-	content: "Before the React App";
-	display: block;
-}
-
-#app:after{
-	content: "After the React App";
-	display: block;
-}

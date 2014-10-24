@@ -13,7 +13,7 @@ var paths = {
   },
   jsx: {
     src: "src/jsx/**/*.jsx",
-    targetDir: 'src/jsx'
+    targetDir: 'src/compiled-jsx'
   }
 };
 
