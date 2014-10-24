@@ -6,8 +6,10 @@ module.exports = function(db){
 			return res.insertId;
 		},
 		read: function* (id){
-			var items = yield db.query("SELECT * FROM items WHERE id = ?", [id]);
+			var itemsData = yield db.query("SELECT * FROM items WHERE id = ?", [id]);
+			var items = itemsData[0] || [];
 			if(items.length!=1){
+				console.log(items, items.length);
 				throw new Error("Invalid item id");
 			}
 			else{

@@ -11,12 +11,11 @@ process.env.PORT || (process.env.PORT = 3000);
 var koa = require("koa");
 
 var app = koa();
-
 var db = {
-  host: "127.0.0.1",
-  database: "react-dc-voting",
-  user: "root",
-  password: "",
+  host: process.env.DB_HOST,
+  database: process.env.DB,
+  user: process.env.DB_USER,
+  password: process.env.DB_PW,
   connectionLimit: 100
 }
 
