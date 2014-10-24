@@ -9,4 +9,4 @@ Things you need to contribute
 - Node
 - NPM
 
-NPM install will install all other dependencies (including React).
+NPM install will install all other dependencies.
