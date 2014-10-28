@@ -36,7 +36,7 @@
   },
   "scripts": {
     "build": "node_modules/.bin/gulp watch",
-    "start": "node --harmony index.js"
+    "start": "DB_HOST='us-cdbr-iron-east-01.cleardb.net' DB='heroku_5a0c234579c7955' DB_USER='b0eefc82ef24c5' DB_PW='5bdff2c9' node --harmony index.js"
   },
   "repository": {
     "type": "git",
