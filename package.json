@@ -5,6 +5,9 @@
   "license": "MIT",
   "description": "An app build by React DC for React DC. Allows memebers to submit requests for talks and to vote on these topics.",
   "main": "index.js",
+  "engines": {
+    "node": "0.11.x"
+  },
   "dependencies": {
     "browserify": "^5.10.1",
     "co": "^3.0.6",
@@ -35,6 +38,7 @@
     "watchify": "~1.0.2"
   },
   "scripts": {
+    "postinstall": "node_modules/.bin/gulp build",
     "build": "node_modules/.bin/gulp watch",
     "start": "DB_HOST='us-cdbr-iron-east-01.cleardb.net' DB='heroku_5a0c234579c7955' DB_USER='b0eefc82ef24c5' DB_PW='5bdff2c9' node --harmony index.js"
   },

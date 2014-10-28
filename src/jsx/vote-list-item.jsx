@@ -11,10 +11,12 @@ var VoteItem = module.exports = React.createClass({
 	},
 	render: function(){
 		return (
-			<div>
+			<div className="item">
 				<div className="votes" onClick={this.vote}>{this.props.votes}</div>
-				<div className="title">{this.props.title}</div>
-				<div className="description">{this.props.description}</div>
+				<div className="item-content">
+					<div className="title">{this.props.title}</div>
+					<div className="description">{this.props.description}</div>
+				</div>
 			</div>
 		)
 	}

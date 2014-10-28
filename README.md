@@ -27,7 +27,7 @@ cd /react-dc-voting
 npm install
 npm run build
 ```
-Now open up a second terminal and type
+Now open up a second terminal and type:
 ```
 npm start
 ```

@@ -21,7 +21,7 @@ window.dataController = module.exports = {
 		var opts = {
 			method: "POST",
 			json: data,
-			url: "/items/new"
+			url: "/items"
 		};
 		var errorMessage = "There was an error creating an item.";
 		this._xhr(opts, errorMessage, cb);

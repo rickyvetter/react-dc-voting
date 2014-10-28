@@ -17,8 +17,8 @@ module.exports = function(db){
 			}
 		},
 		readList: function* (itemCount){
-			// TODO: add ability to set number and start point
-			var items = yield db.query("SELECT * FROM items ORDER BY votes LIMIT ?", [parseInt(itemCount)]);
+			// TODO: add ability to set start point
+			var items = yield db.query("SELECT * FROM items ORDER BY votes DESC LIMIT ?", [parseInt(itemCount)]);
 			return items[0];
 		},
 		update:function *(id,data){

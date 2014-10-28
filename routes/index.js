@@ -5,6 +5,7 @@ module.exports = function (app) {
 	app.get("", loadApp);
 	app.get("/items", getItemList);
 	app.get("/items/:id", getItem);
+	app.post("/items", createItem);
 	app.post("/items/:id", updateItem);
 
 	/** actions */
@@ -32,16 +33,22 @@ module.exports = function (app) {
 		}
 	}
 
+	function* createItem(){
+		try{
+			var item = this.request.body;
+			var createdItem = yield ItemsModel(this.db).create(item);
+			
+			this.body = createdItem;
+		}
+		catch(err){
+			handleError(this, err);
+		}
+	}
+
 	function* updateItem(){
 		try{
 			var item = this.request.body;
-			var updateItem;
-			if(this.params.id === "new"){
-				var updatedItem = yield ItemsModel(this.db).create(item);
-			}
-			else{
-				var updatedItem = yield ItemsModel(this.db).update(this.params.id, item);
-			}
+			var updatedItem = yield ItemsModel(this.db).update(this.params.id, item);
 			
 			this.body = updatedItem;
 		}
