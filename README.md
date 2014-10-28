@@ -25,7 +25,7 @@ The following commands will get you set up:
 git clone git@github.com:reactdc/react-dc-voting.git
 cd /react-dc-voting
 npm install
-npm build
+npm run build
 ```
 Now open up a second terminal and type
 ```
